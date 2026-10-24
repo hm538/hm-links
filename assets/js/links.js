@@ -67,7 +67,7 @@ window.HM_LINKS = {
 
     <div class="list">
       ${link(wa(L.primary.msg), "whatsapp", L.primary.title, L.primary.sub, "primary")}
-      ${link("/portfolio", "grid", "Veja nosso portfólio", "Legend, Barbearia C7, delivery e mais")}
+      ${link("/portfolio", "grid", "Veja nosso portfólio", "Legend, Barbearia C7 e Espetinho dos Amigos")}
     </div>
 
     <section>

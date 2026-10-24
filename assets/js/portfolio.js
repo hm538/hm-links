@@ -1,7 +1,7 @@
 // Portfólio da HM. Para adicionar um trabalho, copie um bloco de "projects".
 // cover: imagem de capa (ex.: "/assets/img/portfolio/legend.jpg"); vazio = capa com as iniciais.
 // result: um número ou frase de resultado real (vazio = não aparece).
-// link: endereço para ver o trabalho (vazio = sem botão).
+// link: endereço para ver o trabalho (vazio = sem botão); linkLabel: texto do botão.
 window.HM_PORTFOLIO = {
   whatsapp: "5562984134046",
   projects: [
@@ -12,7 +12,7 @@ window.HM_PORTFOLIO = {
       text: "Marketing, sistemas e estratégia de crescimento para a marca, incluindo o cartão digital do CEO.",
       result: "",
       cover: "", hue: 38,
-      link: "https://thiago.uselegend.com"
+      link: "https://www.instagram.com/uselegendoficial", linkLabel: "Ver no Instagram"
     },
     {
       name: "Barbearia C7",
@@ -21,25 +21,16 @@ window.HM_PORTFOLIO = {
       text: "Marketing, sistemas e estratégia de crescimento para a barbearia.",
       result: "",
       cover: "", hue: 0,
-      link: ""
+      link: "https://www.instagram.com/c7barbearia", linkLabel: "Ver no Instagram"
     },
     {
       name: "Espetinho dos Amigos",
-      segment: "Espetaria",
+      segment: "Espetinho e jantinha · Goiânia",
       tags: ["Delivery"],
-      text: "Sistema de delivery próprio, com cardápio digital e pedidos online direto com a casa.",
+      text: "Delivery desenvolvido com a HM, com pedidos pelo iFood.",
       result: "",
       cover: "", hue: 18,
-      link: ""
-    },
-    {
-      name: "Rafs",
-      segment: "Delivery",
-      tags: ["Delivery"],
-      text: "Sistema de delivery próprio, com cardápio digital e pedidos online direto com a casa.",
-      result: "",
-      cover: "", hue: 330,
-      link: ""
+      link: "https://www.ifood.com.br/delivery/goiania-go/espetinho-e-jantinha-dos-amigos-setor-sudoeste/33e48e64-fd5b-4406-a7d9-128bb3286845", linkLabel: "Pedir no iFood"
     }
   ]
 };
@@ -66,7 +57,7 @@ window.HM_PORTFOLIO = {
         <p>${esc(p.text)}</p>
         ${p.result ? `<p class="result">${esc(p.result)}</p>` : ""}
         <div class="chips">${p.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
-        ${p.link ? `<a class="see" href="${esc(p.link)}" target="_blank" rel="noopener">Ver o trabalho ${arrow}</a>` : ""}
+        ${p.link ? `<a class="see" href="${esc(p.link)}" target="_blank" rel="noopener">${esc(p.linkLabel || "Ver o trabalho")} ${arrow}</a>` : ""}
       </div>
     </article>`;
 
