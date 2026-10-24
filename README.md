@@ -22,3 +22,8 @@ python3 -m http.server 8000
 
 Site estático, sem build. **Add New → Project → importar este repositório → Deploy** (Framework Preset: *Other*).
 Domínio sugerido: `links.hmdigitalgo.com` (já usado na prévia do link em `index.html`; se mudar, troque lá também).
+
+## Portfólio (`/portfolio`)
+
+Os trabalhos ficam em `assets/js/portfolio.js`. Para adicionar um, copie um bloco de `projects`.
+Capas vão em `assets/img/portfolio/` (16:9, ex.: 1600×900) e entram no campo `cover`. Sem capa, aparece um quadro com as iniciais.

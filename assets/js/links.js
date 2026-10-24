@@ -36,6 +36,7 @@ window.HM_LINKS = {
     bag: '<path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
     globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
     pen: '<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="m14 7 3 3"/>',
+    grid: '<rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/>',
     card: '<rect x="3" y="5" width="18" height="14" rx="3"/><circle cx="9" cy="11" r="2"/><path d="M6 16a3 3 0 0 1 6 0M15 10h3M15 13h3"/>'
   };
   const icon = (n, cls = "i") => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${icons[n]}</svg>`;
@@ -45,7 +46,7 @@ window.HM_LINKS = {
   const ext = 'target="_blank" rel="noopener"';
 
   const link = (href, ic, title, sub, cls = "") => `
-    <a class="link ${cls}" href="${esc(href)}" ${ext}>
+    <a class="link ${cls}" href="${esc(href)}" ${href.startsWith("/") ? "" : ext}>
       <span class="ic">${icon(ic)}</span>
       <span class="tx"><strong>${esc(title)}</strong><small>${esc(sub)}</small></span>
       ${icon("arrow", "i arrow")}
@@ -64,7 +65,10 @@ window.HM_LINKS = {
       </div>
     </header>
 
-    ${link(wa(L.primary.msg), "whatsapp", L.primary.title, L.primary.sub, "primary")}
+    <div class="list">
+      ${link(wa(L.primary.msg), "whatsapp", L.primary.title, L.primary.sub, "primary")}
+      ${link("/portfolio", "grid", "Veja nosso portfólio", "Legend, Barbearia C7, delivery e mais")}
+    </div>
 
     <section>
       <h2>O que a HM faz</h2>

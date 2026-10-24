@@ -143,3 +143,48 @@ main > :nth-child(4) { animation-delay: .29s }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important }
 }
+
+/* ---------- portfólio ---------- */
+[hidden] { display: none !important }
+.pf-head { display: flex; align-items: center; justify-content: space-between }
+.back {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px 8px 10px; border-radius: 99px;
+  border: 1px solid var(--line); color: var(--ice); font: 600 13px var(--body);
+}
+.back:hover { background: rgba(76,141,255,.12) }
+.back svg.i { width: 16px; height: 16px }
+.pf-head .logo-sm { width: 52px }
+.pf-title { display: grid; gap: 10px }
+.eyebrow { font: 500 11px var(--mono); letter-spacing: .22em; text-transform: uppercase; color: var(--electric) }
+.pf-title h1 { font-size: clamp(25px, 7vw, 32px); line-height: 1.12; text-wrap: balance }
+.pf-title h1 em { font-style: normal; color: var(--muted) }
+.pf-title p { margin: 0; color: var(--muted) }
+.filters { display: flex; flex-wrap: wrap; gap: 8px }
+.filters button {
+  padding: 8px 14px; border-radius: 99px; cursor: pointer; font: 600 13px var(--body);
+  background: transparent; border: 1px solid var(--line); color: var(--muted); transition: all .2s;
+}
+.filters button[aria-pressed="true"] { background: var(--ice); color: var(--navy); border-color: var(--ice) }
+.grid { display: grid; gap: 14px }
+.proj { border-radius: 22px; overflow: hidden; background: var(--panel); border: 1px solid var(--line) }
+.cover { aspect-ratio: 16 / 9; max-width: 100%; background: var(--panel-2) }
+.cover img { width: 100%; height: 100%; object-fit: cover }
+.mono {
+  width: 100%; height: 100%; display: grid; place-items: center; position: relative; overflow: hidden;
+  background:
+    radial-gradient(80% 90% at 80% 10%, hsl(var(--h) 70% 55% / .45), transparent 60%),
+    radial-gradient(70% 80% at 10% 100%, rgba(31,95,214,.35), transparent 60%),
+    #0a1020;
+}
+.mono span { font: 700 64px var(--display); letter-spacing: -.03em; color: rgba(233,238,248,.92) }
+.proj-body { padding: 16px 18px 18px; display: grid; gap: 8px }
+.seg { font: 500 10.5px var(--mono); letter-spacing: .18em; text-transform: uppercase; color: var(--electric) }
+.proj h3 { margin: 0; font: 600 19px/1.2 var(--display) }
+.proj p { margin: 0; color: var(--muted); font-size: 14px }
+.proj .result { color: var(--ice); font-weight: 600 }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px }
+.chips span { padding: 4px 10px; border-radius: 99px; font: 600 11.5px var(--body); color: var(--ice); background: rgba(76,141,255,.1); border: 1px solid rgba(140,180,255,.2) }
+.see { justify-self: start; display: inline-flex; align-items: center; gap: 6px; margin-top: 4px; font: 600 13.5px var(--body); color: var(--electric) }
+.see svg.i { width: 16px; height: 16px }
+.see:hover { color: var(--ice) }
+@media (min-width: 560px) { main.wide { max-width: 860px } .grid { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
