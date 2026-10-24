@@ -11,7 +11,7 @@ window.HM_PORTFOLIO = {
       tags: ["Marketing", "Sistemas", "Crescimento"],
       text: "Marketing, sistemas e estratégia de crescimento para a marca, incluindo o cartão digital do CEO.",
       result: "",
-      cover: "", hue: 38,
+      cover: "/assets/img/portfolio/legend.jpg", hue: 38,
       link: "https://www.instagram.com/uselegendoficial", linkLabel: "Ver no Instagram"
     },
     {
@@ -20,7 +20,7 @@ window.HM_PORTFOLIO = {
       tags: ["Marketing", "Sistemas", "Crescimento"],
       text: "Marketing, sistemas e estratégia de crescimento para a barbearia.",
       result: "",
-      cover: "", hue: 0,
+      cover: "/assets/img/portfolio/c7.jpg", hue: 0,
       link: "https://www.instagram.com/c7barbearia", linkLabel: "Ver no Instagram"
     },
     {
@@ -29,7 +29,7 @@ window.HM_PORTFOLIO = {
       tags: ["Delivery"],
       text: "Delivery desenvolvido com a HM, com pedidos pelo iFood.",
       result: "",
-      cover: "", hue: 18,
+      cover: "/assets/img/portfolio/espetinho.jpg", hue: 18,
       link: "https://www.ifood.com.br/delivery/goiania-go/espetinho-e-jantinha-dos-amigos-setor-sudoeste/33e48e64-fd5b-4406-a7d9-128bb3286845", linkLabel: "Pedir no iFood"
     }
   ]
