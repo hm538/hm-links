@@ -96,6 +96,7 @@ window.HM_LINKS = {
       <img class="logo-sm" src="/assets/img/logo-hm.png" alt="" width="1000" height="586">
       <span>Feito para ser lembrado.</span>
       <small>© ${new Date().getFullYear()} HM Digital${L.city ? " · " + esc(L.city) : ""}</small>
+      <a class="credit" href="https://www.hmdigitalgo.com" target="_blank" rel="noopener">Feito por <b>HM Digital</b></a>
     </footer>`;
 
   const toast = document.getElementById("toast");

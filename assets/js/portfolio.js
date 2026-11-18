@@ -83,6 +83,7 @@ window.HM_PORTFOLIO = {
     <footer>
       <span>Feito para ser lembrado.</span>
       <small>© ${new Date().getFullYear()} HM Digital</small>
+      <a class="credit" href="https://www.hmdigitalgo.com" target="_blank" rel="noopener">Feito por <b>HM Digital</b></a>
     </footer>`;
 
   const buttons = document.querySelectorAll("[data-f]");
